@@ -1,0 +1,48 @@
+////////////////////////////////////////////////////////////////////////////////
+//  File:	      input_parameters.txt  
+//  Author:       Filipe Santiago de Queiroz (filipesantiago.qrz@gmail.com)
+//  Description:  Task file for the point cloud segmentation
+//  Modified:     04.11.2018
+//////////////////////////////////////////////////////////////////////////////// 
+
+/////////////////////Region Growing Color Parameters
+DistanceThreshold [9]
+60
+PointColorThreshold [11]
+10
+RegionColorThreshold [13]
+90
+MinClusterSize [15]
+100
+///////////////////Euclidean Clustering Parameters
+ClusterTolerance [18]
+0.008
+MinClusterSize [20]
+100
+MaxClusterSize [22]
+5000
+RadiusSearch [24]
+0.01
+/////////////////Region Growing Parameters
+KSearch [27]
+50
+MinClusterSize [29]
+50
+MaxClusterSize [31]
+5000
+NumberOfNeighbours [33]
+30
+SmoothnessThreshold  (3.0 / 180.0 * M_PI) [35] 0.052359878 785398
+0.1
+CurvatureThreshold [37]
+0.05
+///////////////////Kmeans
+MaxIterations [40]
+100
+NumberK [42]
+10
+///////////////////Colorfy Clusters
+PointSize [45]
+5
+
+
