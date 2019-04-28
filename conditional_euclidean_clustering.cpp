@@ -385,79 +385,7 @@ pcl::PointCloud<PointTypeIO>::Ptr kmeans_reduction(PointCloud<PointTypeIO>::Ptr 
   KMeans kmeans(K, total_points, total_values, max_iterations);
   kmeans.run(points);
   
-  // vector<int> clusters;
-  // vector<int> points_clusters;
-
-  // int cluster1_r;
-  // int cluster1_g;
-  // int cluster1_b;
-  // int cluster1_a;
-
-  // int cluster2_r;
-  // int cluster2_g;
-  // int cluster2_b;
-  // int cluster2_a;
-
-  // for (int i = 0; i < points.size(); i++)
-  // {
-  //   clusters.push_back(points[i].getCluster());
-  // }
-
-  // for (int i = 0; i < K; i++)
-  // {
-  //   int mycount = std::count(clusters.begin(), clusters.end(), i);
-  //   points_clusters.push_back(mycount);
-  // }
-
-  // for (int i = 0; i < tempCloud->points.size(); i++)
-  // {
-  //   if (points[i].getCluster() == 0)
-  //   {
-  //     cluster1_r += tempCloud->points[i].r;
-  //     cluster1_g += tempCloud->points[i].g;
-  //     cluster1_b += tempCloud->points[i].b;
-  //     cluster1_a += tempCloud->points[i].a;
-  //   }
-
-  //   if (points[i].getCluster() == 1)
-  //   {
-  //     cluster2_r += tempCloud->points[i].r;
-  //     cluster2_g += tempCloud->points[i].g;
-  //     cluster2_b += tempCloud->points[i].b;
-  //     cluster2_a += tempCloud->points[i].a;
-  //   }
-  // }
-
-  // vector<int> rgba1;
-  // int c1_r = cluster1_r / points_clusters[0];
-  // int c1_g = cluster1_g / points_clusters[0];
-  // int c1_b = cluster1_b / points_clusters[0];
-  // int c1_a = cluster1_a / points_clusters[0];
-
-  // rgba1.push_back(c1_r);
-  // rgba1.push_back(c1_g);
-  // rgba1.push_back(c1_b);
-  // rgba1.push_back(c1_a);
-
-  // vector<int> rgba2;
-  // int c2_r = cluster2_r / points_clusters[1];
-  // int c2_g = cluster2_g / points_clusters[1];
-  // int c2_b = cluster2_b / points_clusters[1];
-  // int c2_a = cluster2_a / points_clusters[1];
-
-  // rgba2.push_back(c2_r);
-  // rgba2.push_back(c2_g);
-  // rgba2.push_back(c2_b);
-  // rgba2.push_back(c2_a);
-
-  // vector<vector<int>> vec;
-  // vec.push_back(rgba1);
-  // vec.push_back(rgba2);
-
   
-  // vec.push_back(rgba1);
-  // vec.push_back(rgba2);
-  // clusters[i].getCentralValue(j)
   vector<Cluster> vec = kmeans.getResultClusters();
   for (int i = 0; i < tempCloud->points.size(); i++)
   {
